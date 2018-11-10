@@ -4,8 +4,6 @@ about: Suggest an idea for this project
 
 ---
 
-# タイトル
-
 ## 概要
 
 ## Todo
