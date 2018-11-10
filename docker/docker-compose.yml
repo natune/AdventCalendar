@@ -3,8 +3,8 @@ services:
   db:
     image: latest
     build: postgres
-    volume:
-    - postgres:/var/lib/pgsql
+    volumes:
+      - ./postgres:/var/lib/postgresql
     ports:
       - "5432:5432"
     environment:
