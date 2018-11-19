@@ -5,6 +5,7 @@ services:
     build: postgres
     volumes:
       - ./postgres:/var/lib/postgresql
+      - ./postgres/init:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
     environment:
