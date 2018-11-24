@@ -1,7 +1,9 @@
 """アプリケーションで使用するModel層に関するモジュール"""
+from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
+
 
 def init_app(app):
     """アプリケーションでDBを使用するための初期設定
@@ -12,7 +14,7 @@ def init_app(app):
     db.init_app(app)
 
 
-class LoginUser(db.Model):
+class LoginUser(UserMixin, db.Model):
     """アプリケーションにログインするユーザ
 
     Attributes:

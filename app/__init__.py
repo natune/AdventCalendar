@@ -1,9 +1,7 @@
 """アプリケーションの作成や設定の反映などを行うモジュール"""
 from flask import Flask
 
-from app import views
-from app import models
-from app import migrate
+from app import migrate, models, resources, views
 from app.models import db
 
 
@@ -18,4 +16,5 @@ def create_app():
     models.init_app(app)
     views.init_app(app)
     migrate.init_app(app, db)
+    resources.init_app(app)
     return app

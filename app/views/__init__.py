@@ -1,6 +1,7 @@
 """Bulueprintの管理を行うモジュール"""
 from app.views.login_view import login_page
 
+
 def init_app(app):
     """アプリケーションの初期化を行う
 
